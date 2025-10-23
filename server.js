@@ -1,9 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const cheerio = require("cheerio");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.get("/scrape", async (req, res) => {
   const url = req.query.url;
@@ -27,7 +28,7 @@ app.get("/scrape", async (req, res) => {
     const umidadeMin = $('li:contains("Umidade") span.-gray-light').eq(0).text().trim();
     const umidadeMax = $('li:contains("Umidade") span.-gray-light').eq(1).text().trim();
 
-    // SOL — pega o texto e separa nascer/pôr
+    // SOL
     const solText = $('li:contains("Sol")').text().replace(/\s+/g, " ").trim();
     const [nascerSol, porSol] = solText.match(/\d{2}:\d{2}:\d{2}/g);
 
@@ -44,4 +45,6 @@ app.get("/scrape", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`✅ Rodando: http://localhost:${PORT}/scrape?url=`));
+app.listen(PORT, () =>
+  console.log(`✅ Rodando na porta ${PORT} — http://localhost:${PORT}/scrape?url=`)
+);
