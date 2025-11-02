@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Ivirton Nayron</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: rgba(255, 255, 255, 0.6);
+      --bg-dark: rgba(20, 20, 20, 0.5);
+      --glass-border: rgba(255, 255, 255, 0.2);
+      --text-light: #222;
+      --text-dark: #f1f1f1;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #d3e6ff, #ffffff);
+      color: var(--text-light);
+      transition: all 0.4s ease;
+      min-height: 100vh;
+    }
+    .dark-mode {
+      background: linear-gradient(135deg, #0e0e0e, #1c1c1c);
+      color: var(--text-dark);
+    }
+    .glass-card {
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      background-color: var(--bg-light);
+      border-radius: 18px;
+      border: 1px solid var(--glass-border);
+      padding: 25px;
+      transition: all 0.4s ease;
+    }
+    .dark-mode .glass-card {
+      background-color: var(--bg-dark);
+      border-color: rgba(255, 255, 255, 0.05);
+    }
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    .section-title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+    .dark-mode .section-title {
+      color: #66b3ff;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    .dark-mode .toggle-btn {
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+    .project-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" id="themeToggle"><i class="bi bi-sun-fill"></i></button>
+
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <img src="4fc62b60-be3d-46a9-bf1c-6204e3b1a605.png" alt="Ivirton Nayron" class="profile-img mb-3">
+      <h1 class="fw-bold">Ivirton Nayron da Conceição Oliveira</h1>
+      <p class="lead">Desenvolvedor | Editor de Vídeo | Criador Multimídia</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="mailto:ivirton23@gmail.com" class="text-decoration-none text-reset"><i class="bi bi-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/ivirton-nayron" target="_blank" class="text-decoration-none text-reset"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/" target="_blank" class="text-decoration-none text-reset"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+
+    <div class="glass-card mb-4">
+      <h2 class="section-title">Sobre mim</h2>
+      <p>Sou estudante de Ciência da Computação no IFMA - Campus Caxias, apaixonado por tecnologia e comunicação. Tenho experiência em edição de vídeo, marketing digital e desenvolvimento web. Busco sempre unir criatividade e lógica para construir soluções modernas e eficientes.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="glass-card h-100">
+          <h2 class="section-title">Formação</h2>
+          <ul>
+            <li>🎓 Cursando Ciência da Computação – IFMA Campus Caxias (2022 - Atual)</li>
+            <li>🏫 Ensino Médio – Centro de Ensino Cesar Marques (2017)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="glass-card h-100">
+          <h2 class="section-title">Competências</h2>
+          <p><strong>Linguagens:</strong> C++, Python, JavaScript (Node.js, Vue.js), Java, Flask</p>
+          <p><strong>Ferramentas:</strong> HTML, CSS, Bootstrap, CorelDraw, Photoshop, Pacote Office</p>
+          <p><strong>Idiomas:</strong> Inglês Instrumental</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-card mt-4">
+      <h2 class="section-title">Experiência Profissional</h2>
+      <ul>
+        <li><strong>PodiumSportMais</strong> – Editor de vídeo e Desenvolvedor (Atual)</li>
+        <li><strong>Norte Sul Projetos</strong> – Marketing Digital (2022 - 2025)</li>
+        <li><strong>Tropical Solar Engenharia</strong> – Marketing Digital (2022 - 2025)</li>
+        <li><strong>Grupo Petrópoles</strong> – Vigia Noturno (2024 - Atual)</li>
+        <li><strong>Sistema Guanaré de Comunicação</strong> – Editor e Operador de Master (2019 - 2022)</li>
+        <li><strong>Sistema Sinal Verde de Comunicação</strong> – Estágio em Edição de Vídeo (2018 - 2019)</li>
+      </ul>
+    </div>
+
+    <div class="glass-card mt-4">
+      <h2 class="section-title">Projetos</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="project-card">
+            <img src="https://via.placeholder.com/300" alt="Projeto 1">
+            <h5>Projeto Exemplo 1</h5>
+            <p>Descrição principal do projeto. Substitua essa imagem e texto pelos seus próprios projetos.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="project-card">
+            <img src="https://via.placeholder.com/300" alt="Projeto 2">
+            <h5>Projeto Exemplo 2</h5>
+            <p>Descrição principal do projeto. Substitua essa imagem e texto pelos seus próprios projetos.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="project-card">
+            <img src="https://via.placeholder.com/300" alt="Projeto 3">
+            <h5>Projeto Exemplo 3</h5>
+            <p>Descrição principal do projeto. Substitua essa imagem e texto pelos seus próprios projetos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="mt-5">
+      © 2025 - Ivirton Nayron. Todos os direitos reservados.
+    </footer>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const icon = toggle.querySelector('i');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      icon.classList.toggle('bi-sun-fill');
+      icon.classList.toggle('bi-moon-stars-fill');
+    });
+  </script>
+</body>
+</html>
